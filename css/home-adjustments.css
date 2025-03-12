@@ -1,0 +1,67 @@
+/* 
+ * File: home-adjustments.css
+ * Description: Adjustments to make the home section more compact and ensure the image animation works
+ */
+
+/* Make the hero section more compact */
+.hero {
+    min-height: 80vh; /* Reduced from 100vh */
+    padding-top: 4rem; /* Reduced padding */
+    padding-bottom: 2rem; /* Added bottom padding */
+}
+
+/* Adjust spacing between sections */
+#who {
+    padding-top: 2rem; /* Reduced padding at the top */
+}
+
+/* Ensure the hero image animation works */
+.hero-image {
+    flex: 1;
+    max-width: 500px;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Make sure the image is visible and properly sized */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adjust the container to be more compact */
+.hero .container {
+    padding: 0 var(--spacing-sm);
+    margin: 0 auto;
+    gap: 2rem; /* Add gap between content and image */
+}
+
+/* Remove the wave divider to reduce space */
+.hero-wave {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 6rem 0 2rem;
+    }
+    
+    .hero-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

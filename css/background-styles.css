@@ -1,0 +1,89 @@
+/* 
+ * File: background-styles.css
+ * Description: Additional styles to create a mixed background of light blue and pink throughout the site
+ * and adjust text colors for better readability against this background.
+ */
+
+:root {
+    --gradient-bg: linear-gradient(135deg, rgba(247, 208, 208, 0.3), rgba(0, 245, 255, 0.3));
+    --gradient-bg-reverse: linear-gradient(315deg, rgba(247, 208, 208, 0.3), rgba(0, 245, 255, 0.3));
+    --card-bg: rgba(255, 255, 255, 0.85);
+}
+
+/* Apply gradient background to body */
+body {
+    background: var(--gradient-bg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Adjust section backgrounds */
+section {
+    background: transparent;
+}
+
+.who {
+    background: var(--gradient-bg-reverse);
+}
+
+.what {
+    background: var(--gradient-bg);
+}
+
+.why {
+    background: var(--gradient-bg-reverse);
+}
+
+.where {
+    background: var(--gradient-bg);
+}
+
+/* Adjust text colors for better readability */
+.section-header h2 {
+    color: var(--text-dark);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.who-text h3, .what-content h3, .why-content h3, .where-content h3 {
+    color: var(--text-dark);
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Adjust card backgrounds for better contrast */
+.service-card, .team-member, .contact-form {
+    background-color: var(--card-bg);
+}
+
+/* Update navbar for better visibility */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Hero section adjustments */
+.hero {
+    background: transparent;
+}
+
+.hero-content h1 {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+/* Footer adjustments */
+.footer {
+    background-color: rgba(30, 41, 59, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Remove any white background sections */
+.hero-wave path {
+    fill: transparent;
+}
